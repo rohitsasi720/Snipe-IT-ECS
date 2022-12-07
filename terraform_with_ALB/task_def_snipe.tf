@@ -17,7 +17,7 @@ resource "aws_ecs_task_definition" "snipe-main" {
         "secretOptions": null,
         "options": {
           "awslogs-group": "/ecs/snipe",
-          "awslogs-region": "ap-south-1",
+          "awslogs-region": "us-east-1",
           "awslogs-stream-prefix": "ecs"
         }
       },
@@ -35,7 +35,7 @@ resource "aws_ecs_task_definition" "snipe-main" {
       "environment": [
         {
           "name": "APP_DEBUG",
-          "value": "false"
+          "value": "true"
         },
         {
           "name": "APP_ENV",
