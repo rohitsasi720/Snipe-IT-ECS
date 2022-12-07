@@ -12,15 +12,6 @@ resource "aws_ecs_task_definition" "snipe-main" {
     {
       "dnsSearchDomains": null,
       "environmentFiles": null,
-      "logConfiguration": {
-        "logDriver": "awslogs",
-        "secretOptions": null,
-        "options": {
-          "awslogs-group": "/ecs/snipe",
-          "awslogs-region": "us-east-1",
-          "awslogs-stream-prefix": "ecs"
-        }
-      },
       "entryPoint": null,
       "portMappings": [
         {
