@@ -1,5 +1,5 @@
 provider "aws" {
-  region  = var.aws_region
+  region  = us-east-1
 #   profile = default
   
 }
@@ -12,11 +12,3 @@ terraform {
   }
 }
 
-terraform {
-  backend "s3" {
-    bucket = "snipetest"
-    key    = "path/tf.state"
-    region =  "us-east-1"
-    encrypt = true
-  }
-}
