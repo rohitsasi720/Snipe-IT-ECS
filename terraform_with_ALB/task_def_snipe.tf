@@ -178,7 +178,7 @@ resource "aws_ecs_service" "test-service-snipe-main" {
     assign_public_ip = true
   }
     load_balancer {
-    target_group_arn = module.rohan-alb.elb-target-group-arn
+    target_group_arn = module.rohit-alb.elb-target-group-arn
     container_name   = "testapp"
     container_port   = 80
   }
@@ -187,7 +187,7 @@ resource "aws_ecs_service" "test-service-snipe-main" {
 }
 
 data "aws_ecr_repository" "example" {
-  name = "snipe"
+  name = "snipe-it"
 }
 # data "aws_ecr_image" "service_image" {
 #   repository_name = "snipe"
