@@ -22,15 +22,6 @@ resource "aws_ecs_task_definition" "test" {
       {
         "dnsSearchDomains": null,
         "environmentFiles": null,
-        "logConfiguration": {
-          "logDriver": "awslogs",
-          "secretOptions": null,
-          "options": {
-            "awslogs-group": "/ecs/snipe-mysql",
-            "awslogs-region": "us-east-1",
-            "awslogs-stream-prefix": "ecs"
-          }
-        },
         "entryPoint": null,
         "portMappings": [],
         "command": null,
