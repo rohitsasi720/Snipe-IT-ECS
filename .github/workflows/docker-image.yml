@@ -44,6 +44,7 @@ jobs:
         run: |
           echo $IMAGE_TAG
           
+          terraform init -reconfigure
           terraform init
           terraform destroy -auto-approve -input=false
           docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
@@ -56,6 +57,7 @@ jobs:
       - name: Terraform Init
         run: |
           cd terraform_with_ALB
+          terraform init -reconfigure
           terraform init
           
 
