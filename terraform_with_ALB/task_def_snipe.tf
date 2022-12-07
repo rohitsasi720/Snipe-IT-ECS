@@ -55,7 +55,7 @@ resource "aws_ecs_task_definition" "snipe-main" {
         },
         {
           "name": "APP_URL",
-          "value": "http://${module.rohan-alb.elb-dns-name}"
+          "value": "http://${module.rohit-alb.elb-dns-name}"
         },
         {
           "name": "MAIL_ENV_ENCRYPTION",
