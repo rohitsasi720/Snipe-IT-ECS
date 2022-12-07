@@ -11,13 +11,3 @@ terraform {
     }
   }
 }
-
-
-terraform {
-  backend "s3" {
-    bucket = "snipe-terra-tf-1"
-    key    = "terraform_with_ALB/tf.state"
-    region =  "us-east-1"
-    encrypt = true
-  }
-}
